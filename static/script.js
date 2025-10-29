@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Lỗi khi tải danh sách tác giả');
             }
             const authors = await authorsResponse.json();
-c
             renderBooks(allBooksData);
             populateAuthorFilter(authors); 
 
@@ -83,3 +82,4 @@ c
 
     fetchData();
 });
+
