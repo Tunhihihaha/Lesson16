@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Quản lý Sách</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>📚 Dashboard Quản lý Sách</h1>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Tìm kiếm theo Tên sách/Tác giả...">
+
+            <select id="author-filter">
+                <option value="">-- Lọc theo Tác giả --</option>
+            </select>
+        </div>
+
+        <table id="books-table">
+            <thead>
+                <tr>
+                    <th>STT</th> 
+                    <th>Tên Sách</th>
+                    <th>Tác giả (Danh mục)</th>
+                    <th>Giá (£)</th>
+                    <th>Đánh giá (Sao)</th>
+                    <th>Tình trạng</th>
+                    <th>Số lượng</th>
+                </tr>
+            </thead>
+            <tbody id="books-body">
+                <tr>
+                    <td colspan="6" style="text-align: center;">Đang tải dữ liệu...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Book Dashboard | Powered by Flask & JS</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
